@@ -13,11 +13,11 @@ Note, that you will need to add your own Twitter API keys for this demo to work 
 
 To do this go to the [Twitter developer site](https://dev.twitter.com/), Sign in, and from the menu in the top right corner click on the 'My applications' option.
 
-<img src="http://imgur.com/qPwQdoi" alt="Image to show the My applications option on the Twitter Devs site" />
+<img src="http://i.imgur.com/qPwQdoi.jpg" alt="Image to show the My applications option on the Twitter Devs site" />
 
 Then click on create a new application in the top right of the screen, and fill out the 'Create an application' form.  Once this is done, scroll to the bottom of the page to 'Your access token' and click on the 'Create my access token' button.
 
-<img src="http://imgur.com/uyAiZ86" alt="Image to show how to create Your Access tokens from the Twitter Dev site" />
+<img src="http://i.imgur.com/uyAiZ86.jpg" alt="Image to show how to create Your Access tokens from the Twitter Dev site" />
 
 The access token takes a few moments to be created, so give it a minute or so, refresh the page and you should see that Twitter has assigned your app an Access token.
 
