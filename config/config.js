@@ -19,10 +19,10 @@ config = {
 			name: 'Twitter vote counter - local'
 		},
 		twitter: {
-			consumer_key: 'aFAe6IA7vIAbt8BVo8CQ',
-			consumer_secret: 'lwQw74B6luoLabYoDudX4M97H57LiAQCYnSzHOWdI1g',
-			access_token_key: '72845380-oKSjRnmd1J9DrYFOLLDUbbaxqtm6KvFfhGCPni2Uo',
-			access_token_secret: 'dLmIIjVXvwMcyu5H2dVKq7xkvgzvJ08GHh8as4bK08'
+			consumer_key: 'INSERT_CONSUMER_KEY_HERE',
+			consumer_secret: 'INSERT_CONSUMER_SECRET_HERE',
+			access_token_key: 'INSERT_ACCESS_TOKEN_HERE',
+			access_token_secret: 'INSERT_ACCESS_SECRET_HERE'
 		},
 		url:	'',
 		global:	sharedConfig
