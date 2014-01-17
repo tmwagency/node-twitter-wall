@@ -1,0 +1,40 @@
+head
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+	title= pkg.title + ' - ' + title
+	meta(name="description", content=pkg.description)
+
+	meta(http-equiv="Content-type", content="text/html;charset=UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+	<meta property="og:title" content="#{pkg.title} - #{title}">
+	<meta property="og:description" content="#{pkg.description}">
+	<meta property="og:site_name" content="#{pkg.title}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="#{pkg.url}">
+	<meta property="og:image" content="#{pkg.url}images/sharing-icons/sharing-large.png">
+	<meta property="og:locale" content="en_GB">
+
+	//mobile and favicons
+	link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
+	link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+	link(rel="apple-touch-icon", sizes="57x57", href="/apple-touch-icon-57x57.png")
+	link(rel="apple-touch-icon", sizes="72x72", href="/apple-touch-icon-72x72.png")
+	link(rel="apple-touch-icon", sizes="114x114", href="/apple-touch-icon-114x114.png")
+	link(rel="apple-touch-icon", sizes="144x144", href="/apple-touch-icon-144x144.png")
+	link(rel="apple-touch-icon", sizes="57x57", href="/apple-touch-icon-60x60.png")
+	link(rel="apple-touch-icon", sizes="72x72", href="/apple-touch-icon-120x120.png")
+	link(rel="apple-touch-icon", sizes="114x114", href="/apple-touch-icon-76x76.png")
+	link(rel="apple-touch-icon", sizes="144x144", href="/apple-touch-icon-152x152.png")
+
+	// Application styles
+	link(rel='stylesheet', href='/css/kickoff.css')
+
+	// Modernizr
+	script(src="/js/modernizr-build.min.js", async)
+
+	// Font loader scripts
+	script(src="//use.typekit.net/myh8qop.js")
+	script.
+		try{Typekit.load();}catch(e){}
+

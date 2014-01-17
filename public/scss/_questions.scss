@@ -1,0 +1,293 @@
+
+//  =================================
+//  === QUESTION SPECIFIC STYLING ===
+//  =================================
+
+
+//default styling - in the form of a bar chart
+//bars are positioned from the bottom of the screen and grow vertically when the percentage of vites rises
+.question {
+	height:50%;
+
+	@include respond-min($breakpoint-mid) {
+		height:100%;
+	}
+}
+	.question-category {
+		position:relative;
+		z-index: 1;
+		float:left;
+		height: 100%;
+		width: 25%;
+
+		max-width: 85%;
+		min-width: 15%;
+
+		overflow:hidden;
+
+		@include respond-min($breakpoint-wide) {
+			margin-bottom: 50px;
+		}
+
+
+		&:nth-child(odd) {
+			background: #363636;
+		}
+		&:nth-child(even) {
+			background: #464646;
+		}
+	}
+		.question-category-title {
+			position:absolute;
+			bottom: 0;
+			z-index: 15;
+
+			background: rgba(0,0,0, 0.2);
+			width:100%;
+
+			margin: 0;
+			padding: 5px 0;
+
+			@include font-size(18);
+			text-align: center;
+			color: #fff;
+			line-height: 1;
+
+			@include respond-min($breakpoint-narrow) {
+				@include font-size(24);
+				padding: 10px 0;
+			}
+		}
+
+			.category-visual-counter {
+				position: absolute;
+				bottom: 0;
+
+				width: 100%;
+				height: 0;
+
+				//transition on load
+				@include transition(#{height 0.5s 0.5s ease-in});
+
+				//transitions once loaded
+				.animatein & {
+					@include transition(#{height 0.5s ease-in});
+				}
+			}
+			.question-category-tag {
+				@include respond-max($breakpoint-mid) {
+					display: block;
+					@include transform(rotate(270deg));
+					padding-left: 40%;
+				}
+			}
+			.question-category-percentage {
+				display: block;
+				width:100%;
+
+				padding: 5px 0 0;
+			}
+			.question-category-votes {
+				display:block;
+				clear:left;
+				padding-bottom: 5px;
+				@include font-size(12);
+
+				@include respond-min($breakpoint-narrow) {
+					@include font-size(16);
+				}
+			}
+
+		.category-image {
+			position: absolute;
+			z-index: 10;
+		}
+
+//colorPalette : ['#3c5a9a', '#53b049', '#3ba2b7', '#864d79', 'blue', 'yellow'],
+
+//  =======================================
+//  === VISUALS FOR SPECIFIC CONTAINERS ===
+//  =======================================
+
+		.question-category {
+
+
+			/*
+			   2 column poll default
+			   ========================================================================== */
+			.colCount-2 & {
+				width: 50%;
+			}
+
+			/*
+			   3 column poll default
+			   ========================================================================== */
+			.colCount-3 & {
+				width: 33%;
+			}
+			.colCount-3 &:nth-child(2) {
+				width: 34%;
+			}
+
+
+			/*
+			   4 column poll default
+			   ========================================================================== */
+
+			.colCount-4 & {
+				width: 25%;
+			}
+
+		}
+
+		//DEFAULTS for visual counters
+		.category-visual-counter {
+			.category-1 & {	background-color: #3c5a9a;	}
+			.category-2 & {	background-color: #53b049;	}
+			.category-3 & {	background-color: #3ba2b7;	}
+			.category-4 & {	background-color: #864d79;	}
+		}
+
+
+		//question-1 - lynx can totals
+		.category-visual-counter {
+			.category-africa &	{	background-color: #53b049;	}
+			.category-attract &	{	background-color: #3c5a9a;	}
+			.category-apollo &	{	background-color: #3ba2b7;	}
+			.category-excite &	{	background-color: #864d79;	}
+		 }
+
+
+/*
+   Nations favourite - Lynx fragrance poll
+   ========================================================================== */
+
+
+		 .category-image {
+		 	background-size: 100% 100%;
+		 	background-position: bottom center;
+		 	background-repeat: none;
+		 	width: 100%;
+		 	height: 100%;
+
+			.category-africa & {
+				//background-image: url('#{$svg-path}/nations-favourite/can-africa.svg');
+			}§
+			.category-attract & {
+				//background-image: url('#{$svg-path}/nations-favourite/can-attract.png');
+			}
+			.category-apollo & {
+				//background-image: url('#{$svg-path}/nations-favourite/can-apollo.png');
+			}
+			.category-excite & {
+				//background-image: url('#{$svg-path}/nations-favourite/can-excite.png');
+			}
+		 }
+
+[data-questionurl="nations-favourite"] {
+
+	& .category-image {
+		width: 80%;
+		height: auto;
+
+		bottom: 5%;
+		left: 50%;
+		margin-left: -38%;
+	}
+
+}
+
+
+.svg [data-questionurl="girls"] {
+
+	.category-blonde .category-visual-counter	{	background: url('#{$svg-path}/girls/blonde.svg') no-repeat top center; 	}
+	.category-brunette .category-visual-counter {	background: url('#{$svg-path}/girls/brunette.svg') no-repeat top center;	}
+	.category-redhead .category-visual-counter	{	background: url('#{$svg-path}/girls/redhead.svg') no-repeat top center;	}
+
+	.question-category .category-visual-counter {
+		background-size: cover;
+	}
+
+}
+
+.svg [data-questionurl="xfactor-2013"] {
+	.category-LukeFriendMusic { background-color: #055b55; }
+	.category-SamBaileyREAL { background-color: #39275e; }
+	.category-nickymcdonald1 { background-color: #6b96a6; }
+
+	.category-LukeFriendMusic .category-visual-counter	{	background:  url('#{$svg-path}/xfactor-2013/contestant-1.svg') no-repeat top center; 	}
+	.category-SamBaileyREAL .category-visual-counter {	background: url('#{$svg-path}/xfactor-2013/contestant-2.svg') no-repeat top center;	}
+	.category-nickymcdonald1 .category-visual-counter	{	background: url('#{$svg-path}/xfactor-2013/contestant-3.svg') no-repeat top center;	}
+
+	.question-category .category-visual-counter {
+		background-size: cover;
+	}
+
+}
+
+
+[data-questionurl="happiness"] {
+	.category-1 .category-visual-counter {	background: #ffcb04 url('#{$svg-path}/happiness/happy.svg') no-repeat center center; 	}
+	.category-2 .category-visual-counter {	background: #89c2d7 url('#{$svg-path}/happiness/sad.svg') no-repeat center center;	}
+
+	.question-category .category-visual-counter {
+		background-size: 80% 400px;
+	}
+}
+
+[data-questionurl="shower-or-bath"] {
+	.category-1 .category-visual-counter {
+		background: #464646 url('#{$svg-path}/shower-or-bath/shower.svg') no-repeat left bottom;
+		background-size: 100% auto;
+	}
+	.category-2 .category-visual-counter {
+		background: #5f90a5 url('#{$svg-path}/shower-or-bath/bath.svg') no-repeat 102% bottom;
+		background-size: auto 70%;
+	}
+}
+
+[data-questionurl="console-wars-ps4-xbox"] {
+	.category-1 .category-visual-counter {
+		background: #0182ba url('#{$svg-path}/console-wars-ps4-xbox/ps4.svg') no-repeat center center;
+	}
+	.category-2 .category-visual-counter {
+		background: #107c10 url('#{$svg-path}/console-wars-ps4-xbox/xboxone.svg') no-repeat center center;
+	}
+
+	.question-category .category-visual-counter {
+		background-size: 80% 400px;
+	}
+}
+
+
+
+
+//all horizontal style polls should be added to this ruleset
+[data-questionurl="happiness"],
+[data-questionurl="shower-or-bath"],
+[data-questionurl="console-wars-ps4-xbox"] {
+
+	.question-category {
+		width: 50%;
+
+		//initial transition on load
+		@include transition(#{width 0.5s 0.5s ease-in});
+
+		//and then the transitions from load onwards
+		&.animatein {
+			@include transition(#{width 0.5s ease-in});
+		}
+	}
+
+	.question-category .category-visual-counter {
+		height: 100%;
+	}
+
+}
+
+
+
+
+
+
+

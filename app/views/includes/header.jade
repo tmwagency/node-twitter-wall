@@ -1,0 +1,16 @@
+
+header.page-header
+	h2.page-header-title #{title}
+	p
+		| This application uses Node.js to create a streaming connection with Twitter.
+		| Type in your the symbols you would like to watch for and see then streamed in front of your eyes!
+		| The Node application receives this streaming data and broadcasted
+		| to any clients using Socket.io.
+	p
+		em
+			| Last updated:&nbsp;
+			span(id="last-update") Never
+	h2.page-tags
+		| Matching tags:&nbsp;
+		each val, key in tags
+			=val + ((key+1 !== tags.length) ? ', ' : '')

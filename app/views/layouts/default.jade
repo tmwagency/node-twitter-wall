@@ -1,0 +1,20 @@
+doctype 5
+html
+	include ../includes/head
+
+	block vars
+
+	- if (subText === undefined)
+		- subText = 'Oops'
+
+	body
+		div(class="container #{page}")
+			include ../includes/header
+
+
+			.page-content
+				block content
+
+			include ../includes/footer
+
+	include ../includes/foot

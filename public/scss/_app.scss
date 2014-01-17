@@ -1,0 +1,66 @@
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	color: #333;
+}
+	.container {
+		width: 80%;
+		height: 100%;
+		margin: 0 auto;
+		border-bottom: 2px solid #2980b9;
+	}
+		.page-header-title {
+			margin-bottom: 10px;
+			padding:10px;
+			background: #2980b9;
+			color: #fff;
+		}
+
+		.page-tags {
+			padding: 10px 0;
+			border-top: 1px solid #333;
+			border-bottom: 1px solid #333;
+		}
+
+	.page-content {
+		height: 50%;
+		overflow: hidden;
+		border-bottom: 1px solid #333;
+	}
+		.wall-content {
+			height: 100%;
+			overflow:scroll;
+
+			& p {
+				border-bottom:1px solid #ccc;
+				padding-bottom:10px;
+			}
+		}
+
+.page-footer {
+	position: fixed;
+	width: 100%;
+	padding: 10px 10%;
+	background: #2c3e50;
+	bottom: 0;
+	left: 0;
+}
+	.page-footer-links {
+		> li {
+			display: inline-block;
+
+			&:first-child a {
+				border-left: none;
+				padding-left: 0;
+			}
+		}
+		a {
+			color: #fff;
+			border-left: 1px solid #fff;
+			padding: 0 10px;
+		}
+	}

@@ -1,0 +1,41 @@
+// ===================
+// === MIXINS.scss ===
+// ===================
+// * VENDOR PREFIXER
+// * RESPONSIVE
+// * CSS3
+// * UTILITY MIXINS
+// * FORMS
+
+// === Vendor prefix ===
+@import "mixins/prefixer";
+
+// === RESPONSIVE MIXINS ===
+@import "mixins/responsive";
+
+// === CSS3 ===
+@import "mixins/linear-gradient";
+@import "mixins/radial-gradient";
+@import "mixins/css3";
+@import "mixins/animation";
+@import "mixins/keyframes";
+
+// === COMPONENTS ===
+@import "mixins/buttons";
+
+
+// === UTILITY MIXINS ===
+@import "mixins/utility";
+
+// === FORMS ===
+@import "mixins/forms";
+
+// Table columns
+@mixin tableColumns($columnSpan: 1) {
+	float: none; // undo default grid column styles
+	width: (($gridColumnWidth) * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+	margin-left: 0; // undo default grid column styles
+}
+
+// === BROWSER FIXES ===
+@import "mixins/oldIE";
