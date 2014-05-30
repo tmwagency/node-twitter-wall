@@ -9,7 +9,12 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "3.1.2",
+    "express": "4.3.2",
+    "compression": "1.0.2",
+    "morgan": "1.1.1",
+    "body-parser": "1.2.2",
+    "method-override": "1.0.2",
+
     "jade": "*",
     "socket.io": "*",
     "socket.io-client": "*",
