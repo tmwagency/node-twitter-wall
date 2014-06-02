@@ -27,5 +27,7 @@ dist/
 *.map
 _design/
 
+privconfig-*
+
 # Jekyll
 _site/
