@@ -53,7 +53,7 @@ module.exports = function (app, server, config) {
 	//  === State related function  ===
 	//  ===============================
 	t.globalState = {
-		tags : ['web', 'something']
+		tags : ['web']
 	}
 
 	t.openStream = function () {
