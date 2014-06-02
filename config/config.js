@@ -33,16 +33,6 @@ config = {
 		global:	sharedConfig
 	},
 
-	staging: {
-		mode:	'staging',
-		port:	3003,
-		app: {
-			name: 'Twitter vote counter - Staging'
-		},
-		twitter: require('./privconfig-twitter')['staging'],
-		global:	sharedConfig
-	},
-
 	prod: {
 		mode:	'prod',
 		port:	3003,
