@@ -28,24 +28,15 @@ There are then 4 values you need to make a note of on this page and add into the
 - Access token
 - Access token secret
 
-The demo config is located at `config/config.js`.  Open this file in your text editor of choice and look for the following block of code
+An example private config is located at `config/exampleconfig-twitter.js`.  Open this file in your text editor of choice and look for the following block of code
 
-	local: {
-		mode:	'local',
-		port:	3003,
-		app: {
-			name: 'Twitter vote counter - local'
-		},
-		twitter: {
-			consumer_key: 'INSERT_CONSUMER_KEY_HERE',
-			consumer_secret: 'INSERT_CONSUMER_SECRET_HERE',
-			access_token_key: 'INSERT_ACCESS_TOKEN_HERE',
-			access_token_secret: 'INSERT_ACCESS_SECRET_HERE'
-		},
-		url:	'',
-		global:	sharedConfig
+	local : {
+		consumer_key: 'INSERT_CONSUMER_KEY_HERE',
+		consumer_secret: 'INSERT_CONSUMER_SECRET_HERE',
+		access_token_key: 'INSERT_ACCESS_TOKEN_KEY_HERE',
+		access_token_secret: 'INSERT_ACCESS_TOKEN_SECRET_HERE'
 	}
 
 Replace the variables in CAPS with the values from your own created app.
 
-Save and run the node application in the usual way, running `node index.js`.
+Save and rename the file as privconfig-twitter.js and run the node application in the usual way, running `node index.js`.
