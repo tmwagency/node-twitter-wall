@@ -12,8 +12,6 @@ var async = require('async')
 
 module.exports = function (app, twitter) {
 
-	console.log(twitter.globalState.tags);
-
 	app.get('/', function(req, res) {
         res.render('index', {
         	title : 'Twitter Streaming Wall',
