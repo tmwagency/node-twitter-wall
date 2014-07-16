@@ -18,7 +18,7 @@ config = {
 		app: {
 			name: 'Twitter vote counter - local'
 		},
-		twitter: require('./privconfig-twitter')['local'],
+		twitter: require('./config-twitter')['local'],
 		url:	'',
 		global:	sharedConfig
 	},
@@ -29,7 +29,7 @@ config = {
 		app: {
 			name: 'Twitter vote counter - Dev'
 		},
-		twitter: require('./privconfig-twitter')['dev'],
+		twitter: require('./config-twitter')['dev'],
 		global:	sharedConfig
 	},
 
@@ -39,7 +39,7 @@ config = {
 		app: {
 			name: 'Twitter vote counter - Prod'
 		},
-		twitter: require('./privconfig-twitter')['prod'],
+		twitter: require('./config-twitter')['prod'],
 		global:	sharedConfig
 	},
 

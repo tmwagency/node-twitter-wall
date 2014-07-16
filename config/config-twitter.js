@@ -1,9 +1,9 @@
 module.exports = {
 	local : {
-		consumer_key: 'INSERT_CONSUMER_KEY_HERE',
-		consumer_secret: 'INSERT_CONSUMER_SECRET_HERE',
-		access_token_key: 'INSERT_ACCESS_TOKEN_KEY_HERE',
-		access_token_secret: 'INSERT_ACCESS_TOKEN_SECRET_HERE'
+		consumer_key: process.env['TWITTER_API_TOKEN'],
+		consumer_secret: process.env['TWITTER_API_SECRET'],
+		access_token_key: process.env['TWITTER_ACCESS_TOKEN'],
+		access_token_secret: process.env['TWITTER_ACCESS_TOKEN']
 	},
 	dev : {
 		consumer_key: '',
