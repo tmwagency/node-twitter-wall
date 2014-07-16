@@ -1,6 +1,8 @@
 Node Twitter Wall
 =================
 
+<a href href="http://node-twitter-wall.herokuapp.com/">View the demo wall</a>
+
 This builds on the initial demo - the [Node Basic Structure app](https://github.com/tmwagency/node-basic-setup).
 
 This demo shows how to hook into the Twitter streaming API to make a Twitter wall – the same as you might see at a conference or event.
