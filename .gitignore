@@ -23,7 +23,6 @@ Thumbs.db
 *.sublime-*
 
 node_modules/
-dist/
 *.map
 _design/
 
