@@ -1,7 +1,7 @@
 Node Twitter Wall
 =================
 
-**[View the demo](http://node-twitter-wall.herokuapp.com/)**
+**[View the demo >](http://node-twitter-wall.herokuapp.com/)**
 
 This builds on the initial demo - the [Node Basic Structure app](https://github.com/tmwagency/node-basic-setup).
 
