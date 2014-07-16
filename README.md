@@ -1,7 +1,7 @@
 Node Twitter Wall
 =================
 
-<a href href="http://node-twitter-wall.herokuapp.com/">View the demo wall</a>
+**[View the demo](http://node-twitter-wall.herokuapp.com/)**
 
 This builds on the initial demo - the [Node Basic Structure app](https://github.com/tmwagency/node-basic-setup).
 
