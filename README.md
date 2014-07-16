@@ -7,9 +7,9 @@ This demo shows how to hook into the Twitter streaming API to make a Twitter wal
 
 Building on the basic app's structure, it uses Desmond Morris' node-twitter library to connect to Twitter.
 
-Note, that you will need to add your own Twitter API keys for this demo to work when run.
+Note, that you will need to add your own Twitter API keys into the config in order for the application to work when run.  Details of how to create and add these are shown below.
 
-## Creating your API Key
+## Creating your API Keys
 
 To do this go to the [Twitter developer site](https://dev.twitter.com/), Sign in, and from the menu in the top right corner click on the 'My applications' option.
 
@@ -28,7 +28,17 @@ There are then 4 values you need to make a note of on this page and add into the
 - Access token
 - Access token secret
 
-An example private config is located at `config/exampleconfig-twitter.js`.  Open this file in your text editor of choice and look for the following block of code
+###Adding keys to a private config file (for local and development)
+
+When working locally, it‘s a pain to have to declare environment variables each time you run your node application.  Instead, you can store them in a private config file, and access them that way.
+
+Note that you should only do this in development – when running on a production server, it‘s a better idea to declare your environment variables through the command line ([see this article](http://himanshu.gilani.info/blog/2012/09/26/bootstraping-a-node-dot-js-app-for-dev-slash-prod-environment/)).
+
+You can then add these to the application in a couple of ways.
+
+An example private config file is located at `config/_privconfg.js`.  Remove the underscore from the beginning of the file name and then open the file in your text editor of choice.
+
+Once opened, look for the following:
 
 	local : {
 		consumer_key: 'INSERT_CONSUMER_KEY_HERE',
@@ -39,4 +49,4 @@ An example private config is located at `config/exampleconfig-twitter.js`.  Open
 
 Replace the variables in CAPS with the values from your own created app.
 
-Save and rename the file as privconfig-twitter.js and run the node application in the usual way, running `node index.js`.
+Save the file and then run the node application in the usual way, by running `node index.js` on the command line.
